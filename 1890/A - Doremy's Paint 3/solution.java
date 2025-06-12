@@ -3,31 +3,27 @@ import java.util.*;
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int t = sc.nextInt();  // number of test cases
- 
+        int t = sc.nextInt();
         while (t-- > 0) {
-            int n = sc.nextInt();  // size of array
-            Map<Integer, Integer> map = new HashMap<>();
- 
+            int n = sc.nextInt();
+            Map<Integer, Integer> mp = new HashMap<>();
             for (int i = 0; i < n; i++) {
                 int x = sc.nextInt();
-                map.put(x, map.getOrDefault(x, 0) + 1);
+                mp.put(x, mp.getOrDefault(x, 0) + 1);
             }
  
-            if (map.size() >= 3) {
+            if (mp.size() >= 3) {
                 System.out.println("NO");
-            } else if (map.size() == 1) {
+            } else if (mp.size() == 1) {
                 System.out.println("YES");
             } else {
-                List<Integer> values = new ArrayList<>(map.values());
-                if (Math.abs(values.get(0) - values.get(1)) >= 2) {
-                    System.out.println("NO");
-                } else {
-                    System.out.println("YES");
-                }
+                // mp.size() == 2
+                Iterator<Integer> it = mp.values().iterator();
+                int a = it.next();
+                int b = it.next();
+                System.out.println(Math.abs(a - b) >= 2 ? "NO" : "YES");
             }
         }
- 
         sc.close();
     }
 }
