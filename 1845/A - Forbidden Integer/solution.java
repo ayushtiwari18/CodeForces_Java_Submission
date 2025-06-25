@@ -17,16 +17,14 @@ public class Main {
                     System.out.print("1 ");
                 }
                 System.out.println();
-            } 
-            else if (k >= 2 && n % 2 == 0) {
+            } else if (k >= 2 && n % 2 == 0) {
                 System.out.println("YES");
                 System.out.println(n / 2);
                 for (int i = 0; i < n / 2; i++) {
                     System.out.print("2 ");
                 }
                 System.out.println();
-            } 
-            else if (k >= 3) {
+            } else if (k >= 3) {
                 System.out.println("YES");
                 System.out.println(n / 2);
                 System.out.print("3 ");
@@ -34,12 +32,10 @@ public class Main {
                     System.out.print("2 ");
                 }
                 System.out.println();
-            } 
-            else {
+            } else {
                 System.out.println("NO");
             }
         }
- 
         sc.close();
     }
 }
