@@ -10,7 +10,6 @@ public class Main {
             String s = sc.next();
  
             long cnt = 1, cur = 1;
- 
             for (int i = 1; i < s.length(); i++) {
                 if (s.charAt(i) == s.charAt(i - 1)) {
                     cur++;
@@ -22,6 +21,7 @@ public class Main {
  
             System.out.println(cnt + 1);
         }
+ 
         sc.close();
     }
 }
